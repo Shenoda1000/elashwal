@@ -159,35 +159,62 @@
     }
   
   
-  #prices {
-  background-color: #f0f8ff; /* لون الخلفية */
-  padding: 20px; /* مساحة داخلية (حشو) حول المحتوى */
-  border-radius: 8px; /* حواف مستديرة */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* تأثير ظل خفيف */
+#prices {
+    background-color: #f0f8ff; /* لون الخلفية */
+    padding: 20px; /* مساحة داخلية (حشو) حول المحتوى */
+    border-radius: 8px; /* حواف مستديرة */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* تأثير ظل خفيف */
 }
 
 #prices h2 {
-  color: #333; /* لون النص لعنوان القسم */
-  font-weight: bold; /* سمك النص */
-  font-size: 24px; /* حجم النص */
-  margin-bottom: 10px; /* المسافة تحت العنوان */
+    color: #333; /* لون النص لعنوان القسم */
+    font-weight: bold; /* سمك النص */
+    font-size: 24px; /* حجم النص */
+    margin-bottom: 10px; /* المسافة تحت العنوان */
 }
 
 #prices p {
-  color: #666; /* لون النص */
-  font-size: 16px; /* حجم النص */
+    color: #666; /* لون النص */
+    font-size: 16px; /* حجم النص */
 }
 
-#prices ul {
-  list-style-type: none; /* إلغاء رموز القائمة */
-  padding: 0; /* إزالة الحشو الافتراضي */
+/* تنسيق الحاوية */
+.table-container {
+    display: flex;
+    justify-content: space-between; /* توزيع الجداول بالتساوي */
+    gap: 10px; /* مسافة بين الجدولين */
 }
 
-#prices li {
-  color: #333; /* لون النص للعناصر */
-  font-size: 16px; /* حجم النص */
-  padding: 8px 0; /* المسافة بين العناصر */
-  border-bottom: 1px solid #ccc; /* خط فاصل بين العناصر */
+.service-table {
+  width: 60%;
+}
+.price-table {
+  width: 40%;
+}
+.service-table, .price-table {
+    border-collapse: collapse; /* إزالة المسافات بين الخلايا */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
+}
+
+ /* أسلوب الجداول */
+.service-table tr:not(:last-child), .price-table tr:not(:last-child) {
+    border-bottom: 2px solid #f0f8ff; /* خط بنفس لون الخلفية أسفل كل عنصر */
+}
+
+.service-table td, .price-table td {
+    padding: 4px; /* حشو داخل الخلايا */
+    font-size: 15px; /* حجم النص */
+}
+
+/* محاذاة النصوص */
+.service-table td {
+    text-align: center; /* محاذاة النص إلى اليمين */
+}
+
+.price-table td {
+    text-align: center; /* محاذاة النص إلى اليسار */
 }
   
   
@@ -367,9 +394,11 @@
         <li><a href="#section3">تواصل معنا</a></li>
         <li><a href="#section4">مكان المحل</a></li>
         <li><a href="#section5">العروض المتاحة الآن!</a></li>
+        <li><a href="#prices">الأسعار</a></li>
         <li><a href="#discount-calculation">حساب السعر بعد الخصم</a></li>
         <li><a href="#section7">أوقات العمل</a></li>
         <li><a href="#section8">معلومات المبرمج</a></li>
+        
       </ul>
     </li>
   </ul>
@@ -424,23 +453,43 @@
 </section>
   
   
-  <section id="prices">
-  <h2>الأسعار</h2>
-  <p>قائمة بأسعار التصليح والتفصيل:</p>
-  <ul>
-    <li>تضييق 15 جنيها</li>
-    <li>توسيع 15 جنيها</li>
-    <li>تقصير 15 جنيها</li>
-    <li>تطويل 15 جنيها</li>
-    <li>عمل بنس 15 جنيها</li>
-    <li>تركيب سسته 30 جنيها</li>
-    <li>تقصيير كم 25 جنيها</li>
-    <li>تغيير استك 30 جنيها</li>
-    <li>تفصيل قميص كم 200 جنيها</li>
-    <li>تفصيل قميص نص 180 جنيها</li>
-    <li>تفصيل بنطلون 200 جنيها</li>
-    <!-- يمكنك إضافة المزيد من الأسعار هنا -->
-  </ul>
+<section id="prices">
+    <h2>الأسعار</h2>
+    <p>قائمة بأسعار التصليح والتفصيل:</p>
+    <div class="table-container">
+        <table class="service-table">
+            <tbody>
+                <tr><td>تضييق</td></tr>
+                <tr><td>توسيع</td></tr>
+                <tr><td>تقصير</td></tr>
+                <tr><td>تطويل</td></tr>
+                <tr><td>عمل بنس</td></tr>
+                <tr><td>تركيب سسته</td></tr>
+                <tr><td>تقصير كم</td></tr>
+                <tr><td>تغيير استك</td></tr>
+                <tr><td>تفصيل قميص كم</td></tr>
+                <tr><td>تفصيل قميص نص</td></tr>
+                <tr><td>تفصيل بنطلون</td></tr>
+                <!-- يمكنك إضافة المزيد من الخدمات هنا -->
+            </tbody>
+        </table>
+        <table class="price-table">
+            <tbody>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>30 جنيها</td></tr>
+                <tr><td>25 جنيها</td></tr>
+                <tr><td>30 جنيها</td></tr>
+                <tr><td>200 جنيها</td></tr>
+                <tr><td>180 جنيها</td></tr>
+                <tr><td>200 جنيها</td></tr>
+                <!-- يمكنك إضافة المزيد من الأسعار هنا -->
+            </tbody>
+        </table>
+    </div>
 </section>
   
   <!-- أوقات العمل -->
