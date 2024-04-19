@@ -2,9 +2,17 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الأشول - محل ترزي ملابس</title>
   <style>
+    /* تحديد الحاوية الرئيسية */
+    #container {
+        width: 390px;
+        margin: 0 auto; /* لجعل الحاوية في منتصف الشاشة */
+    }
+    /* يمكنك إضافة المزيد من الأنماط هنا حسب الحاجة */
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -86,9 +94,9 @@
 }
   
   #storefront-img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
   
   
@@ -128,22 +136,27 @@
   .name {
       font-weight: bold;
       background-color: #f5f5f5; /* لون الخلفية */
-      width: fit-content; /* جعل عرض النص يناسب حجم النص فقط */
+      width: 200px; /* جعل عرض النص يناسب حجم النص فقط */
       margin: 0 auto; /* محاذاة النص في وسط الصفحة */
       border-radius: 20px; /* حدود مستديرة بنسبة 20 */
       padding: 10px; /* تباعد داخلي */
       transition: transform 0.3s ease-in-out;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       animation: pulse 2s infinite alternate;
+      margin: 20px auto 40px auto;
     }
     .contact a:hover, .contact .numbers:hover {
       background-color: #333;
       color: #fff;
     }
     .contact .numbers {
-      width: 50%;
-      margin: 10px 0px;
-    }
+    width: 50%;
+    margin: 10px 0px;
+}
+
+.contact .numbers:last-child {
+    margin-bottom: 40px;
+}
     .numbersP {
       font-weight: bold;
     }
@@ -162,8 +175,6 @@
 #prices {
     background-color: #f0f8ff; /* لون الخلفية */
     padding: 20px; /* مساحة داخلية (حشو) حول المحتوى */
-    border-radius: 8px; /* حواف مستديرة */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* تأثير ظل خفيف */
 }
 
 #prices h2 {
@@ -196,6 +207,7 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
+    margin-bottom: 40px;
 }
 
  /* أسلوب الجداول */
@@ -204,8 +216,8 @@
 }
 
 .service-table td, .price-table td {
-    padding: 4px; /* حشو داخل الخلايا */
-    font-size: 15px; /* حجم النص */
+    padding: 8px; /* حشو داخل الخلايا */
+    font-size: 20px; /* حجم النص */
 }
 
 /* محاذاة النصوص */
@@ -356,9 +368,7 @@
   .adress {
   background-color: #E0FFFF; /* لون خلفية */
   padding: 20px; /* تباعد داخلي */
-  border-radius: 10px; /* حواف مستديرة */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
-}
+  }
 
 .adress h2 {
   color: #333; /* لون العنوان */
@@ -376,6 +386,11 @@
 }
 /* بدءا من عرض مهمه الموقع 
   </style>
+</head>
+<body>
+  <div id="container">
+    <!-- محتوى الموقع هنا -->
+
 </head>
 <body>
   <header>
@@ -585,5 +600,7 @@ function checkCouponOpened() {
   }
 }
   </script>
+    <!-- باقي الأقسام -->
+  </div>
 </body>
-</html>
+  </html>
