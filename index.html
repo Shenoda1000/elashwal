@@ -6,28 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الأشول - محل ترزي ملابس</title>
   <style>
-    /* تحديد الحاوية الرئيسية */
-    #container {
-        width: 390px;
-        margin: 0 auto; /* لجعل الحاوية في منتصف الشاشة */
-    }
-    /* يمكنك إضافة المزيد من الأنماط هنا حسب الحاجة */
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-      text-align: right;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-  
-  /* قائمة الأقسام */
+ 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
+}
+
 #menu-wrapper {
   position: fixed;
   top: 0;
@@ -36,163 +32,188 @@
 }
 
 #menu-icon {
-  font-size: 40px; /* زيادة حجم علامة القائمة */
-  color: gray; /* تغيير اللون لجعلها واضحة أكثر */
+  font-size: 2.5rem; /* نسبة لحجم الخط الجذري */
+  color: gray;
   cursor: pointer;
-  border-radius: 50%; /* جعل الحواف دائرية بنسبة 50% لجعل الشكل دائريًا */
+  border-radius: 50%;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0px 4px 8px rgba(1, 1, 1, 1);
   animation: pulse 2s infinite alternate;
-  padding: 0px 13px;
+  padding: 0 1rem;
 }
-  
-  
-.dropdown-menu li {
-  list-style-type: none; /* إخفاء النقاط التي بجانب الأقسام في الـ "minu" */
-}
-  
-/* قائمة الأقسام الفرعية (المنسدلة) */
+
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 10px; /* زيادة التباعد من الهامش العلوي للقائمة */
+  top: 1rem; /* نسبة لحجم الخط الجذري */
   right: 0;
   background-color: #333;
-  padding: 10px;
+  padding: 1rem; /* نسبة لحجم الخط الجذري */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 240px; /* تقليل عرض القائمة لجعلها أكثر مناسبة */
+  width: 40vw; /* نسبة لعرض النافذة */
 }
 
-
-/* عرض قائمة الأقسام الفرعية عند تحديد علامة الـ "minu" */
 #menu-wrapper:hover .dropdown-menu {
   display: block;
 }
 
-/* تنسيق الروابط في قائمة الأقسام */
 .dropdown-menu a {
   color: #fff;
   text-decoration: none;
   display: block;
-  padding: 4px 4px;
+  padding: 0.5rem; /* نسبة لحجم الخط الجذري */
   transition: background-color 0.3s ease-in-out;
 }
 
-/* تنسيق الروابط عند التحويل */
 .dropdown-menu a:hover {
   background-color: #555;
 }
-  
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-    section:nth-child(3) {
-  background-color: #FFDAB9; /* لون خلفية جميل */
-  color: #000000; /* لون النص للتباين والوضوح */
+
+section {
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
 }
-  
-  #storefront-img {
+
+section:nth-child(3) {
+  background-color: #FFDAB9;
+  color: #000;
+}
+
+#storefront-img {
+  margin-top: 1rem;
   width: 80%;
   border-radius: 20px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
-  
-  
-  #section2 {
-    background-color: #D3D3D3;
-  }
-    img {
-  width: 200px;
+
+#section2 {
+  background-color: #D3D3D3;
+}
+
+img {
+  margin-top: 1rem;
+  width: 50vw; /* نسبة لعرض النافذة */
   border-radius: 10%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem; /* نسبة لحجم الخط الجذري */
   transition: transform 0.3s ease-in-out;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  animation: pulse 2s infinite alternate; /* تطبيق الرسم المتحرك */
+  animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1); /* الحجم الأصلي */
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.1); /* الحجم المكبر */
+    transform: scale(1.1);
   }
 }
-    .contact {
-      margin-top: 0px;
-      background-color: #B0E0E6;
-    }
-    .contact a, .contact .numbers {
-      color: #333;
-      text-decoration: none;
-      padding: 10px 20px;
-      border: 1px solid #333;
-      margin: 0 10px;
-      display: inline-block;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-  .name {
-      font-weight: bold;
-      background-color: #f5f5f5; /* لون الخلفية */
-      width: 200px; /* جعل عرض النص يناسب حجم النص فقط */
-      margin: 0 auto; /* محاذاة النص في وسط الصفحة */
-      border-radius: 20px; /* حدود مستديرة بنسبة 20 */
-      padding: 10px; /* تباعد داخلي */
-      transition: transform 0.3s ease-in-out;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      animation: pulse 2s infinite alternate;
-      margin: 20px auto 40px auto;
-    }
-    .contact a:hover, .contact .numbers:hover {
-      background-color: #333;
-      color: #fff;
-    }
-    .contact .numbers {
-    width: 50%;
-    margin: 10px 0px;
+
+.contact {
+  margin-top: 0;
+  background-color: #B0E0E6;
+}
+
+.contact a, .contact .numbers {
+  color: #333;
+  text-decoration: none;
+  padding: 1rem 2rem; /* نسبة لحجم الخط الجذري */
+  border: 1px solid #333;
+  margin: 0 1rem; /* نسبة لحجم الخط الجذري */
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.name {
+  font-weight: bold;
+  background-color: #f5f5f5;
+  width: 60vw; /* العرض يتكيف مع النص */
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 1rem; /* نسبة لحجم الخط الجذري */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite alternate;
+}
+
+.contact a:hover, .contact .numbers:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.contact .numbers {
+  width: 50%;
+  margin: 1rem 0;
 }
 
 .contact .numbers:last-child {
-    margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
-    .numbersP {
-      font-weight: bold;
-    }
-  
-    .special-offers {
-      background-color: #FFFACD;
-      padding: 20px;
-      text-align: center;
-    }
-    .special-offers p {
-      font-size: 18px;
-      color: #333;
-    }
-  
-  
+
+.numbersP {
+  font-weight: bold;
+}
+
+.special-offers {
+  background-color: #FFFACD;
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
+}
+
+.special-offers p {
+  font-size: 1.2rem; /* نسبة لحجم الخط الجذري */
+  color: #333;
+}
+
 #prices {
-    background-color: #f0f8ff; /* لون الخلفية */
-    padding: 20px; /* مساحة داخلية (حشو) حول المحتوى */
+  background-color: #f0f8ff;
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
 }
 
 #prices h2 {
-    color: #333; /* لون النص لعنوان القسم */
-    font-weight: bold; /* سمك النص */
-    font-size: 24px; /* حجم النص */
-    margin-bottom: 10px; /* المسافة تحت العنوان */
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem; /* نسبة لحجم الخط الجذري */
+  margin-bottom: 0.5rem; /* نسبة لحجم الخط الجذري */
 }
 
 #prices p {
-    color: #666; /* لون النص */
-    font-size: 16px; /* حجم النص */
+  color: #666;
+  font-size: 1rem; /* نسبة لحجم الخط الجذري */
 }
 
-/* تنسيق الحاوية */
 .table-container {
+  display: flex;
+  
+  gap: 1rem; /* نسبة لحجم الخط الجذري */
+}
+
+.service-table, .price-table {
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  
+}
+
+.service-table tr:not(:last-child), .price-table tr:not(:last-child) {
+  border-bottom: 2px solid #f0f8ff;
+}
+
+.service-table td, .price-table td {
+  padding: 0.5rem; /* نسبة لحجم الخط الجذري */
+  font-size: 1.25rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
+}
+  
+  
+  
+  
+  .table-container {
     display: flex;
-    justify-content: space-between; /* توزيع الجداول بالتساوي */
+    
     gap: 10px; /* مسافة بين الجدولين */
 }
 
@@ -202,47 +223,24 @@
 .price-table {
   width: 40%;
 }
-.service-table, .price-table {
-    border-collapse: collapse; /* إزالة المسافات بين الخلايا */
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
-    margin-bottom: 40px;
-}
-
- /* أسلوب الجداول */
-.service-table tr:not(:last-child), .price-table tr:not(:last-child) {
-    border-bottom: 2px solid #f0f8ff; /* خط بنفس لون الخلفية أسفل كل عنصر */
-}
-
-.service-table td, .price-table td {
-    padding: 8px; /* حشو داخل الخلايا */
-    font-size: 20px; /* حجم النص */
-}
-
-/* محاذاة النصوص */
-.service-table td {
-    text-align: center; /* محاذاة النص إلى اليمين */
-}
-
-.price-table td {
-    text-align: center; /* محاذاة النص إلى اليسار */
-}
   
   
+  
+
 #discount-calculation {
   background-color: #F5DEB3;
-  padding: 20px;
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
   text-align: center;
 }
+
 #discount-calculation label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem; /* نسبة لحجم الخط الجذري */
 }
 
 #discount-calculation input {
-  padding: 12px;
-  margin: 10px;
+  padding: 0.75rem; /* نسبة لحجم الخط الجذري */
+  margin: 0.5rem;
   border-radius: 15px;
   border: 1px solid #ccc;
   transition: transform 0.3s ease-in-out;
@@ -251,16 +249,15 @@
 }
 
 #discount-calculation button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
   background-color: #333;
   color: #fff;
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للزر */
-  transition: transform 0.3s ease-in-out;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
   animation: pulse 2s infinite alternate;
 }
 
@@ -269,126 +266,134 @@
 }
 
 #discount-calculation button span {
-  font-weight: bold; /* جعل النص عريضًا */
+  font-weight: bold;
 }
 
 #discounted-price {
-  font-size: 18px;
+  font-size: 1.125rem; /* نسبة لحجم الخط الجذري */
+}
+
+.opening-hours {
+  background-color: #FFA500;
+  padding: 2rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
+}
+
+.opening-hours h2 {
+  font-size: 1.5rem; /* نسبة لحجم الخط الجذري */
+  color: #333;
+}
+
+.opening-hours p {
+  font-size: 1.125rem; /* نسبة لحجم الخط الجذري */
+  color: #333;
+}
+
+#coupon {
+  background-color: #add8e6;
+  color: #333;
+  width: 50vw; /* استخدام وحدات العرض النسبية */
+  max-width: 200px; /* الحد الأقصى لعرض العنصر لمنع التمدد المفرط */
+  margin: 2rem auto; /* مسافة من الأعلى ومحاذاة للوسط */
+  padding: 0.3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  animation: pulse 2s infinite alternate;
+}
+
+iframe {
+  width: 55vw; /* عرض iframe نسبة لعرض النافذة */
+  height: 55vw; /* ارتفاع iframe يساوي العرض لجعله مربعًا */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  
 }
   
-    .opening-hours {
-      background-color: #FFA500;
-      padding: 20px;
-      text-align: center;
-    }
-    .opening-hours h2 {
-      font-size: 24px;
-      color: #333;
-    }
-    .opening-hours p {
-      font-size: 18px;
-      color: #333;
-    }
-    #coupon {
-      background-color: #add8e6; /* لون خلفية مميز */
-      color: #333; /* لون النص */
-      width: 220px; /* جعل عرض الزر يناسب حجم النص فقط */
-      margin: 0 auto; /* محاذاة الزر في وسط الصفحة */
-      padding: 10px 20px; /* تباعد الداخلي لتحديد حجم الكوبون */
-      border-radius: 20px; /* تدوير الحواف لتكوين شكل مستطيل طولي */
-      cursor: pointer; /* تغيير المؤشر عند تحويله إلى الكوبون */
-      margin-top: 20px; /* تباعد من الأعلى */
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل للعنصر */
-      font-weight: bold; /* جعل النص عريضًا */
-      font-size: 24px; /* تكبير حجم النص */
-      transition: transform 0.3s ease-in-out;
-      animation: pulse 2s infinite alternate;
+@media (max-width: 768px) {
+  #coupon {
+    width: 80vw; /* زيادة العرض عند الشاشات الصغيرة لتناسب العرض */
+    max-width: none; /* إزالة الحد الأقصى لعرض العنصر */
+  }
 }
 
 #coupon p {
-  font-size: 28px; /* تكبير حجم النسبة المئوية */
-  font-weight: bold; /* جعل النص عريضًا */
+  font-size: 2rem; /* نسبة لحجم الخط الجذري */
+  font-weight: bold;
 }
-  .developer-info {
-  background-color: #B0C4DE; /* لون خلفية الموقع */
-  padding: 20px;
+
+.developer-info {
+  background-color: #B0C4DE;
+  padding: 2rem;
   text-align: center;
 }
 
 .section-title {
-  font-size: 24px;
-  color: #333; /* لون العنوان */
-  margin-bottom: 10px;
+  font-size: 1.5rem; /* نسبة لحجم الخط الجذري */
+  font-weight: bold;
+  margin-bottom: 1rem; /* نسبة لحجم الخط الجذري */
 }
 
-.developer-name {
-  font-weight: bold;
-  color: #333; /* لون النص */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1.5rem; /* نسبة لحجم الخط الجذري */
+  text-align: center;
 }
 
-.developer-email {
-  color: #333; /* لون النص */
-  font-weight: bold;
+.footer p {
+  font-size: 1rem; /* نسبة لحجم الخط الجذري */
+  margin: 0;
 }
 
 .contact-developer {
-  color: #333; /* لون الرابط */
+  color: #333;
   text-decoration: none;
-  border: 1px solid #333; /* حدود للرابط */
-  padding: 10px 20px; /* تباعد داخلي */
-  border-radius: 15px; /* حدود مستديرة */
+  padding: 1rem 2rem; /* نسبة لحجم الخط الجذري */
+  border: 1px solid #333;
+  border-radius: 20px;
+  margin: 0 1rem; /* نسبة لحجم الخط الجذري */
   display: inline-block;
-  margin-top: 10px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  animation: pulse 2s infinite alternate;
 }
 
 .contact-developer:hover {
-  background-color: #333; /* لون خلفية الرابط عند التحويل */
-  color: #fff; /* لون النص عند التحويل */
+  background-color: #333;
+  color: #fff;
 }
   
-  .special000 {
-    background-color: #add8e6; /* لون خلفية مميز */
-      color: #333; /* لون النص */
-      width: 250px; /* جعل عرض الزر يناسب حجم النص فقط */
-      margin: 0 auto; /* محاذاة الزر في وسط الصفحة */
-      padding: 10px 20px; /* تباعد الداخلي لتحديد حجم الكوبون */
-      border-radius: 20px; /* تدوير الحواف لتكوين شكل مستطيل طولي */
-      cursor: pointer; /* تغيير المؤشر عند تحويله إلى الكوبون */
-      margin-top: 40px; /* تباعد من الأعلى */
-      margin-bottom: 40px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل للعنصر */
-      font-weight: bold; /* جعل النص عريضًا */
-      font-size: 24px; /* تكبير حجم النص */
-      transition: transform 0.3s ease-in-out;
-      animation: pulse 2s infinite alternate;
+@media (max-width: 768px) {
+  #container {
+    width: 100vw; /* عرض كامل النافذة للشاشات الصغيرة */
   }
   
-  .adress {
-  background-color: #E0FFFF; /* لون خلفية */
-  padding: 20px; /* تباعد داخلي */
+  #menu-icon {
+    font-size: 2rem; /* نسبة لحجم الخط الجذري */
+    padding: 0.5rem; /* نسبة لحجم الخط الجذري */
   }
 
-.adress h2 {
-  color: #333; /* لون العنوان */
+  .dropdown-menu {
+    width: 60vw; /* نسبة لعرض النافذة على الشاشات الصغيرة */
+  }
+
+  #storefront-img, img {
+    width: 80%; /* عرض كامل للشاشات الصغيرة */
+  }
+
+  #coupon {
+    width: 50vw; /* نسبة لعرض النافذة على الشاشات الصغيرة */
+  }
 }
 
-.adress p {
-  color: #666; /* لون النص */
+@media (min-width: 769px) {
+  /* التنسيقات للشاشات الكبيرة */
 }
-
-/* تنسيق الخريطة */
-.adress iframe {
-  border-radius: 10px; /* حواف مستديرة */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
-  border: 2px solid #ccc; /* بوردر */
-}
-/* بدءا من عرض مهمه الموقع 
   </style>
 </head>
 <body>
-  <div id="container">
     <!-- محتوى الموقع هنا -->
 
 </head>
@@ -423,15 +428,15 @@
   
   <section id="section1">
     <h2>عرض مهمة الموقع</h2>
-    <p>محل ترزي ملابس يقوم بتصليح الجينز والقماش وخلافه.</p>
+    <p>محل ترزي ملابس يقوم بتصليح الجينز والقماش وخلافه</p>
   </section>
   
   
  <section id="storefront">
   <h2>واجهة المحل</h2>
   <img src="https://www.raed.net/img?id=745892" alt="واجهة المحل" id="storefront-img">
-  <p>أهلاً وسهلاً بكم! نرحب بكم في محلنا حيث نقدم لكم خدمات التصليح والتفصيل بأرقى جودة واحترافية. قوموا بزيارتنا للحصول على تجربة فريدة ومرضية.</p>
-  <p>هذه هي واجهة محلنا الجميلة! يمكنك رؤيتها والتعرف عليها بسهولة.</p>
+  <p>أهلاً وسهلاً بكم! نرحب بكم في محلنا حيث نقدم لكم خدمات التصليح والتفصيل بأرقى جودة واحترافية. قوموا بزيارتنا للحصول على تجربة فريدة ومرضية</p>
+  <p>هذه هي واجهة محلنا الجميلة! يمكنك رؤيتها والتعرف عليها بسهولة</p>
  </section>
   
   
@@ -452,42 +457,27 @@
 <section class="adress" id="section4">
   <h2>مكان المحل</h2>
   <!-- كود تضمين الخريطة من Google Maps -->
-  <iframe src="https://maps.google.com/?q=%D8%BA%D8%B1%D8%A8+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%82%D8%B3%D9%85+%D8%A3%D9%88%D9%84+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%B3%D9%88%D9%87%D8%A7%D8%AC&ftid=0x144f5933ba8177e3:0x8fa795a37491414c&entry=gps" width="300" height="300" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+  <iframe src="https://maps.google.com/?q=%D8%BA%D8%B1%D8%A8+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%82%D8%B3%D9%85+%D8%A3%D9%88%D9%84+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%B3%D9%88%D9%87%D8%A7%D8%AC&ftid=0x144f5933ba8177e3:0x8fa795a37491414c&entry=gps" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   <p>سوهاج المخبز الالي شارع طفيل بن عمر محل الأشول للجينز وخلافه</p>
 </section>
 
 
   <section class="special-offers" id="section5">
-  <h2>العروض المتاحة الآن!</h2>
+  <h2>!العروض المتاحة الآن</h2>
   <p id="discount-warning" style="color: red; font-weight: bold; margin-top: 10px; display: none;">يرجى الانتباه: لا يمكن استخدام الكوبون على التصليحات بقيمة أقل من 100 جنيهاً.</p>
   <div id="coupon" class="coupon" onclick="showDiscount()">كوبون الخصم</div>
-  <p>ابقى على اطلاع دائم مع عروضنا المميزة! كلما ازدادت قطعك، زادت متعة التوفير.</p>
+  <p>ابقى على اطلاع دائم مع عروضنا المميزة! كلما ازدادت قطعك، زادت متعة التوفير</p>
   <hr> <!-- خط فاصل -->
-  <h2>العرض الحصري!</h2>
-  <p class="special000">استمتع بعرضنا الحصري! اجلب صديقاً إلى محلنا لتصليح وتفصيل الملابس واحصل على ١٠ جنيه كاش باك فوراً على خدمته، وذلك عندما تتجاوز قيمة خدمته ١٠٠ جنيه. والمميز أنه عليك بمرافقته للمحل للحصول على العرض! ولكن هذا ليس كل شيء، فصديقك سيحصل على نفس العرض عندما يدعو شخصاً آخر! لا تفوت هذه الفرصة للتمتع بخدماتنا عالية الجودة وتوفير المال!</p>
+  <h2>!العرض الحصري</h2>
+  <p class="special000">استمتع بعرضنا الحصري! اجلب صديقاً إلى محلنا لتصليح وتفصيل الملابس واحصل على ١٠ جنيه كاش باك فوراً على خدمته، وذلك عندما تتجاوز قيمة خدمته ١٠٠ جنيه. والمميز أنه عليك بمرافقته للمحل للحصول على العرض! ولكن هذا ليس كل شيء، فصديقك سيحصل على نفس العرض عندما يدعو شخصاً آخر! لا تفوت هذه الفرصة للتمتع بخدماتنا عالية الجودة وتوفير المال</p>
 </section>
   
   
 <section id="prices">
     <h2>الأسعار</h2>
-    <p>قائمة بأسعار التصليح والتفصيل:</p>
+    <p>قائمة بأسعار التصليح والتفصيل</p>
     <div class="table-container">
-        <table class="service-table">
-            <tbody>
-                <tr><td>تضييق</td></tr>
-                <tr><td>توسيع</td></tr>
-                <tr><td>تقصير</td></tr>
-                <tr><td>تطويل</td></tr>
-                <tr><td>عمل بنس</td></tr>
-                <tr><td>تركيب سسته</td></tr>
-                <tr><td>تقصير كم</td></tr>
-                <tr><td>تغيير استك</td></tr>
-                <tr><td>تفصيل قميص كم</td></tr>
-                <tr><td>تفصيل قميص نص</td></tr>
-                <tr><td>تفصيل بنطلون</td></tr>
-                <!-- يمكنك إضافة المزيد من الخدمات هنا -->
-            </tbody>
-        </table>
+
         <table class="price-table">
             <tbody>
                 <tr><td>15 جنيها</td></tr>
@@ -504,13 +494,29 @@
                 <!-- يمكنك إضافة المزيد من الأسعار هنا -->
             </tbody>
         </table>
+        <table class="service-table">
+            <tbody>
+                <tr><td>تضييق</td></tr>
+                <tr><td>توسيع</td></tr>
+                <tr><td>تقصير</td></tr>
+                <tr><td>تطويل</td></tr>
+                <tr><td>عمل بنس</td></tr>
+                <tr><td>تركيب سسته</td></tr>
+                <tr><td>تقصير كم</td></tr>
+                <tr><td>تغيير استك</td></tr>
+                <tr><td>تفصيل قميص كم</td></tr>
+                <tr><td>تفصيل قميص نص</td></tr>
+                <tr><td>تفصيل بنطلون</td></tr>
+                <!-- يمكنك إضافة المزيد من الخدمات هنا -->
+            </tbody>
+        </table>
     </div>
 </section>
   
   <!-- أوقات العمل -->
 <section id="discount-calculation">
   <h2>حساب السعر بعد الخصم</h2>
-  <label for="original-price">السعر الأصلي:</label>
+  <label for="original-price">السعر الأصلي</label>
   <input type="number" id="original-price" name="original-price" min="0">
   <button onclick="checkCouponOpened()">احسب السعر بعد الخصم</button>
   <p id="discounted-price"></p>
@@ -519,15 +525,15 @@
   
   <section class="opening-hours" id="section7">
     <h2>أوقات العمل</h2>
-    <p>المحل مفتوح كل يوم ماعدا يوم الأحد من الساعة الرابعة مساءً وحتى الساعة العاشرة مساءً.</p>
+    <p>المحل مفتوح كل يوم ماعدا يوم الأحد من الساعة الرابعة مساءً وحتى الساعة العاشرة مساءً</p>
   </section>
   
   <section class="developer-info" id="section8">
   <h2 class="section-title">معلومات المبرمج</h2>
-  <p>تم تطوير هذا الموقع بواسطة:</p>
+  <p>تم تطوير هذا الموقع بواسطة</p>
   <p class="developer-name">شنودة يوحنا زكريا</p>
   <a href="https://ksmo7m.mimo.run/index.html" target="_blank" class="contact-developer">التواصل مع المبرمج</a>
-  <p>البريد الإلكتروني:</p>
+  <p>البريد الإلكتروني</p>
   <p class="developer-email">shenodayohana24@gmail.com</p>
 </section>
   
@@ -630,6 +636,5 @@ function checkCouponOpened() {
 }
   </script>
     <!-- باقي الأقسام -->
-  </div>
 </body>
 </html>
