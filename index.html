@@ -548,56 +548,85 @@
   });
 });
   
-  
-  var couponClicked = false; // متغير لتتبع حالة النقر
 
+var couponClicked = false;
+
+// وظيفة لعرض خصم الكوبون
 function showDiscount() {
-  if (!couponClicked) {
-    // عرض رسالة التنبيه الأولى
-    alert("يرجى استخدام الكوبون أمام صاحب المحل فقط.");
-    
-    var continueConfirmation = confirm("هل ترغب في استخدام الكوبون؟");
-    if (continueConfirmation) {
-      var discountWarning = document.getElementById("discount-warning");
-      discountWarning.style.display = "block";
-      discountWarning.innerText = "يرجى الانتباه: لا يمكن استخدام الكوبون على التصليحات بقيمة أقل من 100 جنيهاً.";
+    if (!couponClicked) {
+        // عرض رسالة التنبيه الأولى
+        alert("يرجى استخدام الكوبون أمام صاحب المحل فقط.");
+        
+        // تأكيد ما إذا كان المستخدم يريد استخدام الكوبون
+        var continueConfirmation = confirm("هل ترغب في استخدام الكوبون؟");
+        if (continueConfirmation) {
+            // عرض تحذير الخصم
+            var discountWarning = document.getElementById("discount-warning");
+            discountWarning.style.display = "block";
+            discountWarning.innerText = "يرجى الانتباه: لا يمكن استخدام الكوبون على التصليحات بقيمة أقل من 100 جنيهاً.";
 
-      var confirmation = confirm("اضغط موافق لتحصل على نسبة الخصم لديك");
-      if (confirmation) {
-        var discountPercentage = Math.floor(Math.random() * 31);
-        if (discountPercentage !== 0) {
-          document.getElementById("coupon").innerHTML = "كوبون الخصم: " + discountPercentage + "%";
-          if (discountPercentage >= 100) {
-            discountWarning.style.display = "none";
-          }
+            // تأكيد المستخدم للمتابعة
+            var confirmation = confirm("اضغط موافق لتحصل على نسبة الخصم لديك");
+            if (confirmation) {
+                // حساب نسبة الخصم
+                var discountPercentage = Math.floor(Math.random() * 31);
+                if (discountPercentage !== 0) {
+                    document.getElementById("coupon").innerHTML = "كوبون الخصم: " + discountPercentage + "%";
+                    if (discountPercentage >= 100) {
+                        discountWarning.style.display = "none";
+                    }
+                }
+            } else {
+                // إخفاء تحذير الخصم
+                discountWarning.style.display = "none";
+            }
+            couponClicked = true;
+        } else {
+            // إذا اختار المستخدم عدم استخدام الكوبون
+            alert("تم إلغاء استخدام الكوبون.");
         }
-      } else {
-        discountWarning.style.display = "none";
-      }
-      couponClicked = true;
     } else {
-      // لا يستخدم المستخدم الكوبون
-      alert("تم إلغاء استخدام الكوبون.");
+        alert("يمكنك الحصول على الخصم مرة واحدة فقط.");
     }
-  } else {
-    alert("يمكنك الحصول على الخصم مرة واحدة فقط.");
-  }
 }
 
+// وظيفة لحساب السعر بعد الخصم
 function calculateDiscountedPrice() {
-  var originalPrice = document.getElementById("original-price").value;
-  var discountPercentage = parseInt(document.getElementById("coupon").innerText.split(":")[1]); // الحصول على النسبة المئوية من الكوبون
-  var discountedPrice = originalPrice - (originalPrice * (discountPercentage / 100));
-  document.getElementById("discounted-price").innerText = "السعر بعد الخصم: " + discountedPrice.toFixed(2) + " جنيه";
+    var originalPriceElement = document.getElementById("original-price");
+    var originalPrice = parseFloat(originalPriceElement.value);
+
+    // التحقق من السعر الأصلي
+    if (isNaN(originalPrice) || originalPrice <= 0) {
+        alert("يرجى إدخال سعر أصلي صالح.");
+        return;
+    }
+
+    var discountWarning = document.getElementById("discount-warning");
+
+    // التحقق من السعر الأصلي إذا كان أقل من 100 جنيه
+    if (originalPrice < 100) {
+        alert("لن يتم تطبيق الخصم على التصليحات الأقل من 100 جنيهاً.");
+        alert("السعر الأصلي: " + originalPrice.toFixed(2) + " جنيه");
+    } else {
+        // الحصول على نسبة الخصم من الكوبون
+        var couponElement = document.getElementById("coupon");
+        var discountPercentage = parseInt(couponElement.innerText.split(":")[1]);
+        var discountedPrice = originalPrice - (originalPrice * (discountPercentage / 100));
+        alert("تم تطبيق الخصم! السعر بعد الخصم: " + discountedPrice.toFixed(2) + " جنيه");
+    }
 }
 
+// وظيفة للتحقق مما إذا كان الكوبون مفتوحًا
 function checkCouponOpened() {
-  if (!couponClicked) {
-    alert("يرجى فتح كوبون الخصم أولاً لمعرفة نسبة الخصم.");
-  } else {
-    // استمر في حساب السعر بعد الخصم
-    calculateDiscountedPrice();
-  }
+    var couponElement = document.getElementById("coupon");
+    var couponText = couponElement.innerText;
+
+    // تحقق مما إذا كان الكوبون مفتوحًا
+    if (couponClicked && couponText !== "كوبون الخصم") {
+        calculateDiscountedPrice();
+    } else {
+        alert("يرجى فتح كوبون الخصم أولاً لمعرفة نسبة الخصم.");
+    }
 }
   </script>
     <!-- باقي الأقسام -->
