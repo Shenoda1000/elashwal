@@ -21,7 +21,7 @@ header {
 }
 
 #menu-icon {
-  font-size: 2.5rem;
+  font-size: 40px;
   color: gray;
   cursor: pointer;
   border-radius: 50%;
@@ -376,8 +376,8 @@ iframe {
   }
 
   #menu-icon {
-    font-size: 2rem; /* نسبة لحجم الخط الجذري */
-    padding: 0.5rem; /* نسبة لحجم الخط الجذري */
+    font-size: 40px; /* نسبة لحجم الخط الجذري */
+    padding: -5px 5px; /* نسبة لحجم الخط الجذري */
   }
 
   .dropdown-menu {
