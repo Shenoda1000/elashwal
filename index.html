@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtNru0uNbkKPib9MvUx5ed4nSbubW5KDlVw&usqp=CAU" type="image/png" sizes="16x16">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtNru0uNbkKPib9MvUx5ed4nSbubW5KDlVw&usqp=CAU" type="image/png" sizes="32x32">
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtNru0uNbkKPib9MvUx5ed4nSbubW5KDlVw&usqp=CAU" type="image/png" sizes="64x64">
+  <link rel="stylesheet" href="style.css">
+  <title>الأشول - محل ترزي ملابس</title>
+
+</head>
+<body>
+</head>
+<body>
+  <header>
+    <h1>الأشول</h1>
+  </header>
+  
+  
+  <aside id="menu-wrapper">
+  <span id="menu-icon">≡</span>
+  <ul class="dropdown-menu">
+    <li><a href="#">عرض القائمة</a>
+      <hr>
+      <ul class="submenu">
+        <li><a href="#section1">عرض مهمة الموقع</a></li>
+        <li><a href="#section2">صاحب المحل</a></li>
+        <li><a href="#section3">تواصل معنا</a></li>
+        <li><a href="#section4">مكان المحل</a></li>
+        <li><a href="#section5">العروض المتاحة الآن!</a></li>
+        <li><a href="#prices">الأسعار</a></li>
+        <li><a href="#discount-calculation">حساب السعر بعد الخصم</a></li>
+        <li><a href="#section7">أوقات العمل</a></li>
+        <li><a href="#section8">معلومات المبرمج</a></li>
+        
+      </ul>
+    </li>
+  </ul>
+</aside>
+  
+  
+  
+  <section id="section1">
+    <h2>عرض مهمة الموقع</h2>
+    <p>محل ترزي ملابس يقوم بتصليح الجينز والقماش وخلافه</p>
+  </section>
+  
+  
+ <section id="storefront">
+  <h2>واجهة المحل</h2>
+  <img src="shop.png" alt="واجهة المحل" id="storefront-img">
+  <p>أهلاً وسهلاً بكم! نرحب بكم في محلنا حيث نقدم لكم خدمات التصليح والتفصيل بأرقى جودة واحترافية. قوموا بزيارتنا للحصول على تجربة فريدة ومرضية</p>
+  <p>هذه هي واجهة محلنا الجميلة! يمكنك رؤيتها والتعرف عليها بسهولة</p>
+ </section>
+  
+  
+  <section id="section2">
+    <h2>صاحب المحل</h2>
+    <img src="owner.png" alt="صورة صاحب المحل">
+    <p class="name">يوحنا زكريا عازر</p>
+  </section>
+  <section class="contact" id="section3">
+    <h2>تواصل معنا</h2>
+    <a href="https://www.facebook.com/uohanazakariaazer.uohana?mibextid=ZbWKwL" target="_blank">فيسبوك</a>
+    <a href="https://wa.me/رقم_الواتساب" target="_blank">واتساب</a>
+    <p class="numbersP">أرقام الهاتف</p>
+    <p class="numbers">01226102272</p>
+    <p class="numbers">01272880887</p>
+  </section>
+  
+<section class="adress" id="section4">
+  <h2>مكان المحل</h2>
+  <!-- كود تضمين الخريطة من Google Maps -->
+  <iframe src="https://maps.google.com/?q=%D8%BA%D8%B1%D8%A8+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%82%D8%B3%D9%85+%D8%A3%D9%88%D9%84+%D8%B3%D9%88%D9%87%D8%A7%D8%AC%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%B3%D9%88%D9%87%D8%A7%D8%AC&ftid=0x144f5933ba8177e3:0x8fa795a37491414c&entry=gps" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <p>سوهاج المخبز الالي شارع طفيل بن عمر محل الأشول للجينز وخلافه</p>
+</section>
+
+
+  <section class="special-offers" id="section5">
+  <h2>العروض المتاحة الآن!</h2>
+  <p id="discount-warning" style="color: red; font-weight: bold; margin-top: 10px; display: none;">يرجى الانتباه: لا يمكن استخدام الكوبون على التصليحات بقيمة أقل من 100 جنيهاً.</p>
+  <div id="coupon" class="coupon" onclick="showDiscount()">كوبون الخصم</div>
+  <p>ابقى على اطلاع دائم مع عروضنا المميزة! كلما ازدادت قطعك، زادت متعة التوفير</p>
+  <hr> <!-- خط فاصل -->
+  <h2>العرض الحصري!</h2>
+  <p class="special000">استمتع بعرضنا الحصري! اجلب صديقاً إلى محلنا لتصليح وتفصيل الملابس واحصل على ١٠ جنيه كاش باك فوراً على خدمته، وذلك عندما تتجاوز قيمة خدمته ١٠٠ جنيه. والمميز أنه عليك بمرافقته للمحل للحصول على العرض! ولكن هذا ليس كل شيء، فصديقك سيحصل على نفس العرض عندما يدعو شخصاً آخر! لا تفوت هذه الفرصة للتمتع بخدماتنا عالية الجودة وتوفير المال</p>
+</section>
+  
+  
+<section id="prices">
+    <h2>الأسعار</h2>
+    <p>قائمة بأسعار التصليح والتفصيل</p>
+    <div class="table-container">
+
+
+        <table class="service-table">
+            <tbody>
+                <tr><td>تضييق</td></tr>
+                <tr><td>توسيع</td></tr>
+                <tr><td>تقصير</td></tr>
+                <tr><td>تطويل</td></tr>
+                <tr><td>عمل بنس</td></tr>
+                <tr><td>تركيب سسته</td></tr>
+                <tr><td>تقصير كم</td></tr>
+                <tr><td>تغيير استك</td></tr>
+                <tr><td>تفصيل قميص كم</td></tr>
+                <tr><td>تفصيل قميص نص</td></tr>
+                <tr><td>تفصيل بنطلون</td></tr>
+                <!-- يمكنك إضافة المزيد من الخدمات هنا -->
+            </tbody>
+        </table>
+        <table class="price-table">
+            <tbody>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>15 جنيها</td></tr>
+                <tr><td>30 جنيها</td></tr>
+                <tr><td>25 جنيها</td></tr>
+                <tr><td>30 جنيها</td></tr>
+                <tr><td>200 جنيها</td></tr>
+                <tr><td>180 جنيها</td></tr>
+                <tr><td>200 جنيها</td></tr>
+                <!-- يمكنك إضافة المزيد من الأسعار هنا -->
+            </tbody>
+        </table>
+    </div>
+</section>
+  
+  <!-- أوقات العمل -->
+<section id="discount-calculation">
+  <h2>حساب السعر بعد الخصم</h2>
+  <label for="original-price">السعر الأصلي</label>
+  <input type="number" id="original-price" name="original-price" min="0">
+  <button onclick="checkCouponOpened()">احسب السعر بعد الخصم</button>
+  <p id="discounted-price"></p>
+</section>
+
+  
+  <section class="opening-hours" id="section7">
+    <h2>أوقات العمل</h2>
+    <p>المحل مفتوح كل يوم ماعدا يوم الأحد من الساعة الرابعة مساءً وحتى الساعة العاشرة مساءً</p>
+  </section>
+  
+  <section class="developer-info" id="section8">
+  <h2 class="section-title">معلومات المبرمج</h2>
+  <p>تم تطوير هذا الموقع بواسطة</p>
+  <p class="developer-name">شنودة يوحنا زكريا</p>
+  <a href="https://ksmo7m.mimo.run/index.html" target="_blank" class="contact-developer">التواصل مع المبرمج</a>
+  <p>البريد الإلكتروني</p>
+  <p class="developer-email">shenodayohana24@gmail.com</p>
+</section>
+  
+    <script src="script.js"></script>
+</body>
+</html>
