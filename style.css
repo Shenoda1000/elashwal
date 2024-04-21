@@ -40,7 +40,7 @@ header {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 20rem;
+  width: 26rem;
 }
 
 #menu-wrapper:hover .dropdown-menu {
@@ -51,7 +51,7 @@ header {
   color: #fff;
   text-decoration: none;
   display: block;
-  padding: 0.5rem;
+  padding: 0.1rem;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -110,7 +110,7 @@ img {
   text-decoration: none;
   padding: 1rem 2rem;
   border: 1px solid #333;
-  margin: 0 1rem;
+  margin: 1.5rem 1rem;
   display: inline-block;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -207,7 +207,7 @@ img {
 
 .service-table td, .price-table td {
   padding: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   text-align: center;
 }
   
@@ -315,6 +315,9 @@ iframe {
   text-align: center;
  }
   
+.developer-email {
+  font-size: 0.8rem;
+}
 .contact-developer {
   color: #333;
   text-decoration: none;
