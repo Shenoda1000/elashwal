@@ -20,16 +20,15 @@ header {
   z-index: 1000;
 }
 
-#menu-icon {
-  font-size: 40px;
-  color: gray;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0px 4px 8px rgba(1, 1, 1, 1);
-  animation: pulse 2s infinite alternate;
-  padding: 0 1rem;
-}
+ #menu-icon {
+   font-size: 40px; /* نسبة لحجم الخط الجذري */
+   color: gray;
+   
+   padding: 0px 15px ;
+   border-radius: 15px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+   
+  } 
 
 .dropdown-menu {
   display: none;
@@ -368,6 +367,7 @@ iframe {
 .special000 {
   width: 80vw;
  }
+  
 }
   
 @media (max-width: 768px) {
@@ -375,10 +375,6 @@ iframe {
     width: 100vw; /* استخدام العرض النسبي بنسبة كاملة */
   }
 
-  #menu-icon {
-    font-size: 40px; /* نسبة لحجم الخط الجذري */
-    padding: -5px 5px; /* نسبة لحجم الخط الجذري */
-  }
 
   .dropdown-menu {
     width: 60vw; /* نسبة لعرض النافذة */
@@ -395,6 +391,6 @@ iframe {
 
 @media (min-width: 769px) {
   /* التنسيقات للشاشات الكبيرة */
+ 
 }
 
-@media (max-width:
