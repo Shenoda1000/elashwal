@@ -302,13 +302,6 @@ opening-hours p {
   animation: pulse 2s infinite alternate;
 }
 
-iframe {
-  width: 55%;
-  height: 55%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-}
-
 .developer-info {
   background-color: #B0C4DE;
   padding: 2rem;
@@ -389,12 +382,6 @@ iframe {
     width: 50vw; /* نسبة لعرض النافذة */
   }
   
-  iframe {
-  width: 250px;
-  height: 250px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
- }
 }
 
 @media (min-width: 769px) {
