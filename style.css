@@ -41,7 +41,14 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 26rem;
 }
-
+/* إخفاء النقط السوداء في القائمة المنسدلة */
+ul.dropdown-menu {
+  list-style: none;
+}
+/* إخفاء النقطة السوداء في القائمة المنسدلة */
+ul.dropdown-menu > li > a::before {
+  display: none;
+}
 #menu-wrapper:hover .dropdown-menu {
   display: block;
 }
