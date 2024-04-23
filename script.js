@@ -1,16 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('menu-icon').addEventListener('click', function() {
-    var submenu = document.querySelector('.dropdown-menu');
-    submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
-  });
+    // مستمع الحدث لتبديل عرض القائمة عند النقر على أيقونة القائمة
+    document.getElementById('menu-icon').addEventListener('click', function() {
+        var submenu = document.querySelector('.dropdown-menu');
+        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+    });
 
-  document.addEventListener('click', function(event) {
-    var menu = document.getElementById('menu-wrapper');
-    var target = event.target;
-    if (!menu.contains(target)) {
-      document.querySelector('.dropdown-menu').style.display = 'none';
-    }
-  });
+    // مستمع الحدث لإخفاء القائمة عند النقر خارجها
+    document.addEventListener('click', function(event) {
+        var menu = document.getElementById('menu-wrapper');
+        var target = event.target;
+        if (!menu.contains(target)) {
+            document.querySelector('.dropdown-menu').style.display = 'none';
+        }
+    });
+
+    // إضافة مستمعات أحداث `click` إلى الروابط داخل القائمة
+    var menuLinks = document.querySelectorAll('.dropdown-menu a');
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // منع التنقل الافتراضي للروابط
+            // توجيه المستخدم إلى القسم المستهدف بسلاسة
+            var targetSection = document.querySelector(link.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // إخفاء القائمة بعد النقر
+            var submenu = document.querySelector('.dropdown-menu');
+            submenu.style.display = 'none';
+        });
+    });
 });
   
 
